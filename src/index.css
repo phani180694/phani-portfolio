@@ -1,0 +1,13 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{--bg:#F7FAF9;--card:#FFFFFF;--fg:#0B1220;--mut:#4B5A72;--line:#DDE6E2;--acc:#0E9F6E;--onacc:#fff}
+.dark{--bg:#070F1D;--card:#0C1628;--fg:#F1F5FB;--mut:#8D9BB5;--line:#18263F;--acc:#1DD48A;--onacc:#04241A}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+html{scroll-padding-top:90px}
+body{background:var(--bg);color:var(--fg);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:8px}
+.grid-bg{background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 30% 30%,#000 10%,transparent 70%);opacity:.5}
+.glow{background:radial-gradient(600px circle at 25% 20%,color-mix(in srgb,var(--acc) 22%,transparent),transparent 60%)}
+.glass{background:color-mix(in srgb,var(--card) 70%,transparent);backdrop-filter:blur(10px)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.marquee{animation:marquee 35s linear infinite}.marquee-wrap:hover .marquee{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.marquee{animation:none}}
